@@ -5,7 +5,7 @@ services:
 # ╭──────────────────────────────────────────────────────────╮
 # │                   NGINX PROXY MANAGER                    │
 # ╰──────────────────────────────────────────────────────────╯
-  nginx-proxy-manager`:
+  nginx_proxy_manager`:
     image: 'jc21/nginx-proxy-manager:latest'
     restart: unless-stopped
     ports:
@@ -14,7 +14,7 @@ services:
       - '443:443'
     env_file: .env
     environment:
-      DB_MYSQL_HOST: "nginx-proxy-manager-db"
+      DB_MYSQL_HOST: "nginx_proxy_manager_db"
       DB_MYSQL_PORT: 3306
       DB_MYSQL_USER: $PROXY_MANAGER_MYSQL_USER
       DB_MYSQL_PASSWORD: $PROXY_MANAGER_MYSQL_PASSWORD
@@ -23,7 +23,7 @@ services:
       - ./data:/data
       - ./letsencrypt:/etc/letsencrypt
       
-  nginx-proxy-manager-db:
+  nginx_proxy_manager_db:
     image: 'jc21/mariadb-aria:latest'
     restart: unless-stopped
     env_file: .env
