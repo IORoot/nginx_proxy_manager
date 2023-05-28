@@ -5,7 +5,7 @@ services:
 # ╭──────────────────────────────────────────────────────────╮
 # │                   NGINX PROXY MANAGER                    │
 # ╰──────────────────────────────────────────────────────────╯
-  nginx_proxy_manager`:
+  nginx_proxy_manager:
     image: 'jc21/nginx-proxy-manager:latest'
     restart: unless-stopped
     ports:
