@@ -22,7 +22,9 @@ services:
     volumes:
       - ./data/app:/data
       - ./data/letsencrypt:/etc/letsencrypt
-      
+    networks:
+      - proxy-manager
+
   nginx_proxy_manager_db:
     image: 'jc21/mariadb-aria:latest'
     restart: unless-stopped
@@ -34,3 +36,11 @@ services:
       MYSQL_PASSWORD: $PROXY_MANAGER_MYSQL_PASSWORD
     volumes:
       - ./data/mysql:/var/lib/mysql
+    networks:
+      - proxy-manager
+
+      
+networks:
+  default:
+    external: true
+    name: proxy-manager
