@@ -23,6 +23,9 @@ services:
       - ./data/app:/data
       - ./data/letsencrypt:/etc/letsencrypt
 
+# ╭──────────────────────────────────────────────────────────╮
+# │                DATABASE FOR PROXY MANAGER                │
+# ╰──────────────────────────────────────────────────────────╯
   nginx_proxy_manager_db:
     image: 'jc21/mariadb-aria:latest'
     restart: unless-stopped
