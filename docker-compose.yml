@@ -34,9 +34,3 @@ services:
       MYSQL_PASSWORD: $PROXY_MANAGER_MYSQL_PASSWORD
     volumes:
       - ./data/mysql:/var/lib/mysql
-
-
-networks:
-  default:
-    external: true
-    name: proxy-manager
