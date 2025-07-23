@@ -1,4 +1,4 @@
-![header](https://raw.githubusercontent.com/IORoot/wp-sandbox/refs/heads/master/header.jpg)
+![header](https://raw.githubusercontent.com/IORoot/nginx_proxy_manager/refs/heads/master/header.jpg)
 
 # NGINX Proxy Manager
 
